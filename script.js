@@ -11,7 +11,7 @@ function toast(msg) {
 
 $('#menuToggle').addEventListener('click', () => $('#navLinks').classList.toggle('open')); $$('#navlinks a').forEach(a => a.addEventListener('click', () => $('#navlinks').classList.remove('open'))); $$('.add-cart').forEach(b => b.addEventListener('click', () => {
     cart++;
-    $('#cartCounts').textContent = cart;
+    $('#cartCount').textContent = cart;
     toast(b.dataset.name + ' adicionado ao carrinho!');
 }));
 
@@ -29,7 +29,7 @@ $('#accountBtn').addEventListener('click', () => toast('Área do cliente: entre 
 $('#searchForm').addEventListener('submit', e => {
     filterProducts($('#searchInput').value.trim());
     $('#produtos').scrollIntoView();
-}); $$('.category').forEach(c => c.addEventListener('click', () => filterProducts(c.dataset.categoria)));
+}); $$('.category').forEach(c => c.addEventListener('click', () => filterProducts(c.dataset.filter)));
 
 $('#clearFilter').addEventListener('click', e => {
     e.preventDefault(); $$('.product-card').forEach(p => p.style.display = 'flex'); $('#searchInput').value = '';
