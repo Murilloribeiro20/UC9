@@ -56,7 +56,7 @@ $('#bookingForm').addEventListener('submit', e => {
     e.preventDefault();
     const n = $('#clientName').value, p = $('#petName').value, s = $('#serviceSelect').value, phone = $('#clientPhone').value;
     const msg = `Olá, PetFeliz! Meu nome é ${n}. Gostaria de solicitar ${s} para meu pet ${p}. Meu telefone: ${phone}.`;
-    window.open('https://wa.me/5500000000000?text=' + encodeURIComponent(msg), '_blank');
+    window.open('https://wa.me/27999999999?text=' + encodeURIComponent(msg), '_blank');
     closeModal();
     toast('Solicitação preparada para envio pelo WhatsApp!');
 });
